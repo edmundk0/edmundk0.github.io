@@ -1,8 +1,10 @@
 const canvas = document.getElementById('star-canvas');
 const ctx = canvas.getContext('2d');
 
-canvas.width = 1460;
-canvas.height = 1860; //surely this wont come back to haunt me
+// canvas.width = 1460;
+// canvas.height = 1860; //surely this wont come back to haunt me UPDATE: LMAO IT ACTUALLY CAME BACK TO HAUNT ME
+
+canvas.height = canvas.height * 0.8;
 
 let starsPerSecond = 50; 
 let verticalDensityGradient = 0.85; 
@@ -35,7 +37,7 @@ function generateStar() {
 
   const x = randomRange(0, canvas.width);
   const y = randomRange(0, canvas.height);
-  const radius = randomRange(1, 3);
+  const radius = randomRange(1, 2);
   const alpha = randomRange(0.5, 1);
 
   // gradient logic

@@ -1,8 +1,14 @@
 @font-face {
-    font-family: 'alittlepot';
-    src: url(styles/fonts/alittlepot.ttf) format("truetype");
-    font-weight: normal; 
-    font-style: normal; 
+    font-family: 'A Little Pot';
+    src: url('styles\fonts\ALittlePot.eot');
+    src: url('styles\fonts\ALittlePot.eot?#iefix') format('embedded-opentype'),
+        url('styles\fonts\ALittlePot.woff2') format('woff2'),
+        url('styles\fonts\ALittlePot.woff') format('woff'),
+        url('styles\fonts\ALittlePot.svg#ALittlePot') format('svg'),
+        url('styles\fonts\alittlepot.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
@@ -46,7 +52,7 @@ body,#debug{
 
 h2 {
     color: white;
-    font-family: "alittlepot";
+    font-family: 'A Little Pot';
     margin: 0;
 }
 
