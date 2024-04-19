@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+ <!-- Stop peeking at my ugly code >:( -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>simulation</title>
+    <link rel="icon" href="images/webtabicon/shimeji.png">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+  <body>
+    <img src="images/test/bg4.png" id="bg">
+    <div id="container">
+      <div id="titlecard">
+        <h2>SiMUlatiOn</h2>
+      </div>
+      <table>
+        <tbody>
+          <tr>
+            <td id="primarytd">
+              <div class="box">
+                <h2 style="display:inline; font-family: alittlepot;">~~~~~w h e r e    - a r e -    w e ?</h2> 
+                <br>
+                <img src="/images/test/girls-last.gif" id="gltgif">
+                <p>Yo ! my name is edmund. this is a website that i'm slowly building up. might not be a while till i feel like it's completed.</p>
+                <p>i'm most likely going to use it for hosting my github, socials, blogs, and maybe throw in some fun things to find. who knows !</p>
+                <ul style="margin-block-start: 5px">
+                  if you couldn't tell already, i love the girls last tour / shimeji simulation vibe.
+                  <br><br>
+                  it's pretty fun to mess around with. go read them !!!
+                  <br><br>
+                  - To do list -
+                  <br><br>
+                  <li>Figure out a good table layout for this website. Needs time to cook.</li>
+                  <br>
+                  <li>Let the website have some personality. Avoid minimalism for once.</li>
+                  <br>
+                  <li>More moving parts. I like the little scrolling text below :)</li>
+                  <br>
+                  <li>I'm kinda proud of the little twinkling star generation I have going on in the background, but I don't think it's in a true final version yet. <br> Refresh the page if you didn't notice it the first time!</li>
+                </ul>
+              </div>
+                <div>
+                  <div style="font-family: 'daydream_3'; font-weight: bolder;" class="marquee">
+                    <!-- this font shit not working bruh! gonna find a different one later. bummer. -->
+                    <marquee scrollamount="10" style="color:white;" id="marqueeText"></marquee>
+                  </div>
+                  <script src="dreaming.js"></script>
+                </div>
+                <div class="box">
+                  <h2 style="display:inline; font-family: alittlepot;">~~~~~e d m u n d ' s    -    P r O j e c t s</h2>
+                  <p> this is where i plan to add direct links to things i've worked on !</p>
+                </div>
+                <div class="box">
+                  <h2 style="display:inline; font-family: alittlepot;">~~~~~B l O g - P o s t S</h2>
+                  <p> won't make any promises yet, but i hope to use this as a way to write about future plans, progress posts, updating projects, etc!
+                    <br> like... super far into the future...
+                  </p>
+                </div>
+                <div class="box">
+                  <h2 style="display:inline; font-family: alittlepot;">~~~~~L i V E - C H A T</h2>
+                  <img src="images/livechat.gif" id="livechaticon">
+                  <p>i really like steam profile comments, so i thought it would be pretty funny to have something similar here. 
+                    <br> it'll probably start with a basic posting feature, but it would be really cool if I can somehow turn it into a live updating feed.
+                  </p>
+                </div>
+              </div>
+            </td>
+            <td id="sidetd">
+              <div class="box" style="text-align: center;">
+                <h2 style="display:inline;">n a v i g a t i o n</h2>
+                <img src="/images/sidebox/recoverycompass.gif" id="compassgif">
+                <br><br>
+                <p>W I P</p>
+              </div>
+              <div class="box" style="text-align: center;">
+                <h2 style="display:inline">w i d g e t s</h2>
+                <br><br>
+                <p>W I P</p>
+              </div>
+              <div class="box" style="text-align: center;">
+                <h2 style="display:inline; padding-right: 4px">c o n t a c t</h2>
+                <img src="/images/sidebox/contactphone2.png" id="contactphonealt">
+                <img src="/images/sidebox/contactphone.png" id="contactphone">
+                <br><br>
+                <img src="/images/sidebox/discord.png" id="discordicon">
+                <button id="copytoclipboard" onclick="copyClipboard()">
+                  <a>edmundk.</a>
+                </button>
+                <br>
+                <a style="text-decoration: none; font-size: 20px;">✉ </a>
+                <a href="mailto:admin@edmundk.dev">admin@edmundk.dev</a>
+                <script>
+                  let copytoclipboard = document.getElementById('copytoclipboard');
+                  copytoclipboard.addEventListener("click", function(){
+                    var text = "edmundk.";
+                    var input = document.createElement("input");
+                    input.value = text;
+                    document.body.appendChild(input);
+                    input.select();
+                    document.execCommand("copy");
+                    document.body.removeChild(input);
+                  });
+                </script>
+              </div>
+              <div class="box" style="text-align: center;">
+                <img src="images/shimejiread.png" style="height: 100%; width: 100%;">
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <footer></footer>
+    </div>
+    <div>
+      <canvas id="star-canvas" width="1470" height="1860"></canvas>
+      <script src="stars.js"></script>
+    </div>
+    <div>
+      <a id="randomLink" href="#" target="_blank"></a>
+      <button id="door"></button>
+      <script src="door.js"></script>
+    </div>
+  </body>
+</html>
