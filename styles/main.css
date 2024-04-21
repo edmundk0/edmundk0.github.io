@@ -1,19 +1,6 @@
 @font-face {
-    font-family: 'A Little Pot';
-    src: url('styles\fonts\ALittlePot.eot');
-    src: url('styles\fonts\ALittlePot.eot?#iefix') format('embedded-opentype'),
-        url('styles\fonts\ALittlePot.woff2') format('woff2'),
-        url('styles\fonts\ALittlePot.woff') format('woff'),
-        url('styles\fonts\ALittlePot.svg#ALittlePot') format('svg'),
-        url('styles\fonts\alittlepot.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
     font-family: 'daydream_3';
-    src: url(styles/fonts/Daydream.ttf) format("truetype"); /*why its not working!?*/
+    src: url('fonts/Daydream.ttf') format('truetype'); /*shoutout to the eepy tsniper guy*/
 }
 
 @font-face {
@@ -27,7 +14,7 @@
 body {
     overflow-x: hidden;
     margin: 0;
-    margin-top: 10px
+    margin-top: 10px;
 }
 body,#debug{
     font-family: russiangothic, Tahoma;
@@ -79,19 +66,21 @@ button:hover {
 }
 
 #door {
+    /*Out of order until I fix background image situation*/
     background:none;
     cursor:pointer;
     position: absolute; 
-    top: 3250px; 
-    right: 230px; 
-    width: 75px; 
-    height: 140px;
+    width: 0px; 
+    height: 0px;
 }
 
 
 #container,#backside-container {
     width: 900px;
-    margin: 0 auto
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #titlecard {
@@ -101,12 +90,14 @@ button:hover {
 }
 
 #primarytd {
-    width: 675px;
+    width: 65%;
+    min-width: 65%;
     vertical-align: baseline
 }
 
 #sidetd {
-    width: 275px;
+    width: 30%;
+    min-width: 30%;
     vertical-align: baseline
 }
 
@@ -136,7 +127,7 @@ button:hover {
     display: inline-block;
 }
 .marquee marquee span.not {
-    color: red;
+    color: #9ee8fd;
 }
 @keyframes marquee {
     0% {
@@ -154,15 +145,17 @@ button:hover {
 }
 #compassgif {
     float: right;
-    margin-left: 8px;
-    width: 30px;
-    height: 30px
+    padding-top: 4px;
+    margin-left: 4px;
+    width: 28px;
+    height: 28px
 }
 
 #contactphone {
     float: right;
     position: absolute;
-    margin-left: 12px;
+    padding-top: 2px;
+    margin-left: 6px;
     width: 24px;
     height: 32px;
     animation: fade 1s infinite alternate;
@@ -170,7 +163,8 @@ button:hover {
 #contactphonealt {
     float: right;
     position: absolute;
-    margin-left: 12px;
+    padding-top: 2px;
+    margin-left: 6px;
     width: 24px;
     height: 32px;
     animation-delay: 1s;
@@ -203,4 +197,17 @@ button:hover {
     background-color: #000000;
     width: 100%;
     position: absolute;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+} 
+@media (max-width: 768px) { /* Adjust this breakpoint as needed */
+    #bg {
+        background-size: contain; /* Change to 'contain' for mobile */
+        height: 100%; /* Ensure image covers full height of screen */
+        position: fixed; /* Use fixed positioning for mobile */
+        top: 0;
+        left: 0;
+    }
 }
