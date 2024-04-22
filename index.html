@@ -1,6 +1,6 @@
 <!DOCTYPE html>
- <!-- Stop peeking at my ugly code >:( -->
 <html lang="en">
+   <!-- Stop peeking at my ugly code >:( -->
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,7 +14,6 @@
     <link rel="stylesheet" href="styles\fonts\stylesheet.css"> 
 </head>
   <body>
-    <img src="images/test/bg4.png" id="bg">
     <div id="container">
       <div id="titlecard">
         <h2>SiMUlatiOn</h2>
@@ -31,20 +30,21 @@
                 <img src="/images/test/girls-last.gif" id="gltgif">
                 <p>Yo ! my name is edmund. this is a website that i'm slowly building up. might not be a while till i feel like it's completed.</p>
                 <p>i'm most likely going to use it for hosting my github, socials, blogs, and maybe throw in some fun things to find. idk!</p>
-                <ul style="margin-block-start: 5px">
+                <ul style="padding-inline-start: 5px;">
                   if you couldn't tell already, i love the girls last tour / shimeji simulation vibe.
-                  <br><br>
-                  it's pretty fun to mess around with. go read them !!!
-                  <br><br>
-                  - To do list -
-                  <br><br>
-                  <li>Figure out a good table layout for this website. Needs time to cook.</li>
                   <br>
-                  <li>background image (scroll below) has a mind of its own so i need to remake it.</li>
+                  it's pretty fun to mess around with. go read them !!!
+                  <br>
+                </ul>
+                <p style="text-align:center">- To do list -</p>
+                <ul style="margin-block-start: 5px;">
+                  <li>Figure out a good table layout for this website. Needs time to cook.</li>
                   <br>
                   <li>Let the website have some personality. Avoid minimalism for once.</li>
                   <br>
                   <li>More moving parts. I like the little scrolling text below :)</li>
+                  <br>
+                  <li>Going to try to make my own widgets on the side column, but that'll be it's own adventure.</li>
                   <br>
                   <li>I'm kinda proud of the little twinkling star generation I have going on in the background, but I don't think it's in a true final version yet. <br> Refresh the page if you didn't notice it the first time!</li>
                 </ul>
@@ -79,26 +79,26 @@
                 <h2 style="display:inline;">n a v i g a t i o n</h2>
                 <img src="/images/sidebox/recoverycompass.gif" id="compassgif">
                 <br><br>
-                <p>W I P</p>
+                <ul style="margin-top: 4px;padding-inline-start: 20px; text-align: left; font-size: 16px;">
+                  <a href="https://github.com/edmundk0/edmundk0.github.io" target="_blank"><li>GitHub Repo</li></a>
+                  <a href="https://www.last.fm/user/edmundkr" target="_blank"><li>last.fm</li></a>
+                  <a href="https://myanimelist.net/profile/edmundk" target="_blank"><li>MyAnimeList</li></a>
+                  <li>...</li>
+                </ul>
               </div>
               <div class="box" style="text-align: center;">
-                <h2 style="display:inline">w i d g e t s</h2>
-                <br><br>
-                <p>W I P</p>
-              </div>
-              <div class="box" style="text-align: center;">
-                <h2 style="display:inline; padding-right: 4px">c o n t a c t</h2>
+                <h2 style="display:inline; padding-right: 4px;">c o n t a c t</h2>
                 <img src="/images/sidebox/contactphone2.png" id="contactphonealt">
                 <img src="/images/sidebox/contactphone.png" id="contactphone">
-                <br><br>
+                <br>
                 <img src="/images/sidebox/discord.png" id="discordicon">
                 <button id="copytoclipboard" onclick="copyClipboard()">
                   <a>edmundk.</a>
                 </button>
                 <br>
-                <a style="text-decoration: none; font-size: 20px;">✉ </a>
+                <a style="text-decoration: none; font-size: 20px; ">✉ </a>
                 <a href="mailto:admin@edmundk.dev">admin@edmundk.dev</a>
-                <p style="margin: 0; color: white; font-size: 12px; opacity: 20%">v0.1.8</p>
+                <p style="margin: 0; color: white; font-size: 12px; opacity: 20%">v0.1.9</p>
                 <script>
                   let copytoclipboard = document.getElementById('copytoclipboard');
                   copytoclipboard.addEventListener("click", function(){
@@ -122,7 +122,7 @@
       <footer></footer>
     </div>
     <div>
-      <canvas id="star-canvas" width="1470" height="1860"></canvas>
+      <canvas id="star-canvas"  width="1470" height="1860"></canvas> <!--width="1470" height="1860"-->
       <script src="stars.js"></script>
     </div>
     <div>

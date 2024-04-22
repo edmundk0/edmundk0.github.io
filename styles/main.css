@@ -190,7 +190,7 @@ button:hover {
     opacity: .55
 }
 
-#bg {
+/* #bg { temporarily(?) retired
     z-index: -999;
     margin-top: 10px;
     background-size: cover;
@@ -201,12 +201,20 @@ button:hover {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-} 
+}  */
 @media (max-width: 768px) { /* Adjust this breakpoint as needed */
-    #bg {
-        background-size: contain; /* Change to 'contain' for mobile */
-        height: 100%; /* Ensure image covers full height of screen */
-        position: fixed; /* Use fixed positioning for mobile */
+    /* #bg { temporarily(?) retired
+        
+        height: 100%; 
+        position: fixed; 
+        top: 0;
+        left: 0;
+    } */
+    #star-canvas {
+        background-size: contain; 
+        position: fixed; 
+        width: 100%;
+        height: 100%;
         top: 0;
         left: 0;
     }
