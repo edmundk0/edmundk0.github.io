@@ -4,7 +4,7 @@ const ctx = canvas.getContext('2d');
 // canvas.width = 1460;
 // canvas.height = 1860; //surely this wont come back to haunt me UPDATE: LMAO IT ACTUALLY CAME BACK TO HAUNT ME
 
-canvas.height = canvas.height * 0.8;
+canvas.height = canvas.height;
 
 let starsPerSecond = 50; 
 let verticalDensityGradient = 0.85; 
